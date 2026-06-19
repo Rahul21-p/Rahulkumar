@@ -1,2 +1,2 @@
 # Rahulkumar
-Content Writer Portfolio | Blog Writing, Website Content &amp; SEO Basics
+Content Writer Portfolio | Blog Writing and Website Content &amp;
