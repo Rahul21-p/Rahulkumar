@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rahul Kumar | Premium Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<style>
+:root {
+    --p: #2563eb;
+    --p-hover: #1d4ed8;
+    --d: #0f172a;
+    --bg: #eef4ff;
+    --text: #333;
+}
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, var(--bg), #fff);
+    color: var(--text);
+    line-height: 1.6;
+}
+.hero {
+    padding: 100px 8%;
+    background: linear-gradient(135deg, #2563eb, #0f172a);
+    color: #fff;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 56px;
+    margin: 0 0 10px 0;
+    letter-spacing: -1px;
+}
+.hero p {
+    font-size: 20px;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+.btn {
+    display: inline-block;
+    margin: 8px 10px 0 0;
+    padding: 12px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.b1 {
+    background: #fff;
+    color: var(--p);
+}
+.b1:hover {
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.2);
+}
+.b2 {
+    border: 2px solid #fff;
+    color: #fff;
+}
+.b2:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+.wrap {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+.card {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+h2 {
+    color: var(--d);
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 2px solid var(--bg);
+    padding-bottom: 10px;
+}
+h3 {
+    color: var(--p);
+    margin: 0 0 5px 0;
+}
+.timeline {
+    border-left: 3px solid var(--p);
+    padding-left: 20px;
+    margin-left: 10px;
+}
+.badge {
+    display: inline-block;
+    background: #dbeafe;
+    color: var(--p-hover);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.bar {
+    margin: 16px 0;
+}
+.bar div:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.track {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.fill {
+    height: 100%;
+    background: var(--p);
+    border-radius: 20px;
+}
+.metric {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--p);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+/* Portfolio Specific Styles */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+.sample-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+.sample-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--p);
+    box-shadow: 0 10px 20px rgba(37,99,235,0.1);
+}
+.sample-meta {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+.sample-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--d);
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+.sample-desc {
+    font-size: 14px;
+    color: #475569;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+.read-more {
+    color: var(--p);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: gap 0.3s;
+}
+.read-more:hover {
+    gap: 8px;
+}
+
+footer {
+    background: var(--d);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.9;
+}
+a {
+    text-decoration: none;
+    color: var(--p);
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <h1>Rahul Kumar</h1>
+    <p>Content Writer • SEO Specialist • Copywriter</p>
+    <p style="font-size: 16px; font-weight: 300;">Creating content that ranks on search engines, educates readers, and drives measurable business growth.</p>
+    <a class="btn b1" href="#samples"><i class="fa-solid fa-pen-nib"></i> View Portfolio</a>
+    <a class="btn b2" href="#contact"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+</section>
+
+<div class="wrap">
+
+    <div class="grid">
+        <div class="card">
+            <h2>Professional Summary</h2>
+            <p>Detail-oriented content writer with professional experience spanning SEO blogs, website copy, keyword research, editing, and specialized healthcare content. Passionate about producing reader-first content that delivers high-impact, measurable business value.</p>
+        </div>
+
+        <div class="card">
+            <h2>Why Hire Me</h2>
+            <ul style="padding-left: 20px; margin-bottom: 0;">
+                <li>Search Engine Optimization (SEO) focused</li>
+                <li>In-depth, research-driven methodology</li>
+                <li>Conversion-optimized website & landing page copy</li>
+                <li>Specialized healthcare niche experience</li>
+                <li>Reliable, adaptable, and highly detail-oriented</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 id="samples" style="text-align: center; border: none; margin: 40px 0 20px 0; font-size: 32px;">Featured Writing Samples</h2>
+    <div class="portfolio-grid">
+        
+        <div class="sample-card">
+            <div class="sample-meta"><span class="badge">B2B Marketing</span></div>
+            <h3 class="sample-title">Growthic: Driving Conversions Through Humanized Content Strategies</h3>
+            <p class="sample-desc">A deep-dive article and proposal piece focused on organic growth, tailored outreach, and structuring marketing content for agencies.</p>
+            <a href="#" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="sample-card">
+            <div class="sample-meta"><span class="badge">Brand Copywriting</span></div>
+            <h3 class="sample-title">Wonderjoy Enterprises: Wholesale Brand Launch & Positioning</h3>
+            <p class="sample-desc">Developed engaging foundational brand copy and product descriptions tailored for a newly launched B2B children's toy and gift enterprise.</p>
+            <a href="#" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="sample-card">
+            <div class="sample-meta"><span class="badge">Healthcare SEO</span></div>
+            <h3 class="sample-title">Understanding Patient Care: A Guide to Modern Wellness Practices</h3>
+            <p class="sample-desc">An SEO-optimized, medically accurate blog post designed to educate readers while targeting high-volume, low-competition keywords.</p>
+            <a href="#" class="read-more">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+    </div>
+    <div class="grid" style="text-align: center;">
+        <div class="card"><div class="metric">6+</div>Months Internship</div>
+        <div class="card"><div class="metric">2</div>Professional Roles</div>
+        <div class="card"><div class="metric">6</div>Industry Certifications</div>
+    </div>
+
+    <div class="card" style="margin-bottom: 24px;">
+        <h2>Experience Timeline</h2>
+        <div class="timeline">
+            <h3>Content Writer Executive</h3>
+            <p><b>Tech World Digital Solution</b> • Feb 2026 – Present</p>
+            <p>SEO blogs • Website content • Editing • Research • Digital marketing support</p>
+            <br>
+            <h3>Content Writer Intern</h3>
+            <p><b>Tech World Digital Solution</b> • Jun 2025 – Jan 2026</p>
+            <p>Keyword research • Medical blogs • SEO content • Blog writing</p>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>Skills Dashboard</h2>
+            <div class="bar"><div>Content Writing</div><div class="track"><div class="fill" style="width:95%"></div></div></div>
+            <div class="bar"><div>Search Engine Optimization (SEO)</div><div class="track"><div class="fill" style="width:85%"></div></div></div>
+            <div class="bar"><div>Keyword Research</div><div class="track"><div class="fill" style="width:88%"></div></div></div>
+            <div class="bar"><div>Digital Marketing</div><div class="track"><div class="fill" style="width:75%"></div></div></div>
+        </div>
+
+        <div class="card">
+            <h2>Tools & Technologies</h2>
+            <div style="margin-top: 15px;">
+                <span class="badge">Semrush</span>
+                <span class="badge">HubSpot</span>
+                <span class="badge">WordPress</span>
+                <span class="badge">Google Docs</span>
+                <span class="badge">Canva</span>
+                <span class="badge">ChatGPT</span>
+                <span class="badge">Grammarly</span>
+                <span class="badge">MS Excel</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <h2>Education</h2>
+            <p><b>Bachelor of Arts</b><br>University of Delhi (2023–2026)</p>
+            <p>Class XII • CBSE</p>
+            <p>Class X • UP Board</p>
+        </div>
+
+        <div class="card">
+            <h2>Certifications</h2>
+            <ul style="padding-left: 20px;">
+                <li>HubSpot SEO & Content Marketing</li>
+                <li>HubSpot Social Media Marketing</li>
+                <li>Simplilearn Digital Marketing</li>
+                <li>Udemy Digital Marketing</li>
+                <li>Semrush Keyword Research Essentials</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card" id="contact" style="margin-top: 24px;">
+        <h2>Let's Connect</h2>
+        <div class="grid" style="margin-bottom: 0;">
+            <div>
+                <p>📧 <a href="mailto:rahulsinghparihar1149@gmail.com">rahulsinghparihar1149@gmail.com</a></p>
+                <p>📱 <a href="tel:+918882693138">+91 8882693138</a></p>
+            </div>
+            <div>
+                <p>💼 <a target="_blank" href="https://www.linkedin.com/in/rahul-kumar-b4a30b295">LinkedIn Profile</a></p>
+                <p>💬 <a target="_blank" href="https://wa.me/918882693138">WhatsApp Message</a></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer>© 2026 Rahul Kumar • Built for SEO & Conversions</footer>
+</body>
+</html>
